@@ -1,10 +1,10 @@
 import numpy as np
+import pandas as pd
+import dask.dataframe as ddf
 
 lista = []
 for x in range(10):
-    # Modificaciones master
-    for y in lista:
-        if y % x == 0:
-            return y
+    # Nuevas modificaciones
+    df = ddf.read_excel("*.xlsx")
 
-print("Modificaciones script_1 master")
+print("Nuevas Modificaciones script_1 master")
