@@ -1,8 +1,10 @@
 import numpy as np
 
-lista = []
-for x in range(10):
-    if x < 5:
-        lista.append(x)
-        print(x)
+from setup.tools import reduce
 
+lista = []
+
+# Modificaciones ingestas
+df = reduce(lambda left, right: pd.concat([left, right]), lista)
+
+print("Modificaciones script_1 ingestas")
