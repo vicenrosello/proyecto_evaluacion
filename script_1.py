@@ -1,10 +1,10 @@
 import numpy as np
-import pandas as pd
-import dask.dataframe as ddf
+
+from setup.tools import reduce
 
 lista = []
-for x in range(10):
-    # Nuevas modificaciones
-    df = ddf.read_excel("*.xlsx")
 
-print("Nuevas Modificaciones script_1 master")
+# Modificaciones ingestas
+df = reduce(lambda left, right: pd.concat([left, right]), lista)
+
+print("Modificaciones script_1 ingestas")
